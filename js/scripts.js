@@ -1,7 +1,17 @@
-
+var leapYear = function(year) {
+  if (year % 4 === 0) {
+    return true;
+  }
+  else if (year % 100 != 0) {
+    return true;
+  }
+  else if (year % 400 === 0){
+    return true;
+  }
+}
 
 $(document).ready(function() {
-  $("form#response").submit(function(event) {
+  $("form#leap-year").submit(function(event) {
     event.preventDefault();
 
     var year = parseInt($("input#year").val());
